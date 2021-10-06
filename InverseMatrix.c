@@ -2,7 +2,7 @@
 
 int main() {
     int mat[2][2]; //initialize a 2x2 matrix
-    int det = 0;//determinant
+    float det = 0;//determinant
 
     printf("Enter elements of a matrix row wise: \n");
 
@@ -27,7 +27,7 @@ int main() {
     //ad - bc
     det = (mat[0][0] * mat[1][1]) - (mat[0][1] * mat[1][0]);
 
-    printf("The determinant is: %d\n", det);
+    printf("The determinant is: %.2f\n", det);
 
     //determinant cannot be 0
     if(det != 0) {
@@ -44,7 +44,7 @@ int main() {
         for(int i = 0; i < 2; i++) {
             printf("\n");
             for(int j = 0; j < 2; j++) {
-                printf("%d\t", mat[i][j]/det); 
+                printf("%.2f\t", (mat[i][j])/det); 
             }
         }
     }
